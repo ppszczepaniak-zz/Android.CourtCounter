@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme2" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#fb8c00</item>
+        <item name="colorButtonNormal">#fb8c00</item>
+    </style>
+
+</resources>

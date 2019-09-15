@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/id_licznik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Drużyna A"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp"
+                android:textColor="#616161" />
+
+            <TextView
+                android:id="@+id/id_scoreA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="56sp" />
+
+            <Button
+                android:id="@+id/threePointsA_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:onClick="plusThreeA"
+                android:text="+3 punkty" />
+
+            <Button
+                android:id="@+id/twoPointsA_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:onClick="plusTwoA"
+                android:text="+2 punkty" />
+
+            <Button
+                android:id="@+id/onePointA_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:onClick="plusOneA"
+                android:text="rzut wolny" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Drużyna B"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp"
+                android:textColor="#616161" />
+
+            <TextView
+                android:id="@+id/id_scoreB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="0"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:textSize="56sp" />
+
+
+            <Button
+                android:id="@+id/threePointsB_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:onClick="plusThreeB"
+                android:text="+3 punkty" />
+
+            <Button
+                android:id="@+id/twoPointsB_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:onClick="plusTwoB"
+                android:text="+2 punkty" />
+
+            <Button
+                android:id="@+id/onePointB_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:onClick="plusOneB"
+                android:text="rzut wolny" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/id_licznik"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/basektball1" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:onClick="resetScore"
+        android:text="resetuj wynik" />
+
+</RelativeLayout>
